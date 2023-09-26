@@ -28,18 +28,25 @@ const toDetailPage = (name: string) => {
     .replace(/^-+|-+$/g, "");
   router.push({ name: "project-detail", params: { name: slug } });
 };
+
+initSmoothScrolling();
 </script>
 
 <template>
-  <div class="grid grid-cols-2">
+  <div class="grid grid-cols-2 gap-4 m-4">
     <div
-      class="flex-1 grid items-center relative"
+      class="flex-1 grid items-center relative group"
       v-for="project in data"
       :key="project.id"
       @click="toDetailPage(project.title)"
     >
+      <!--<h3
+        class="absolute bottom-0 z-10 p-5 text-xl text-white bg-gradient-to-t from-black w-full hidden group-hover:block"
+      >
+        {{ project.title }}
+      </h3>-->
       <h3
-        class="absolute bottom-0 z-10 p-5 text-xl bg-gradient-to-t from-black w-full"
+        class="text-left absolute z-10 bottom-0 bg-gradient-to-t from-black w-full text-3xl text-white italic capitalize p-8 pointer-events-none hidden group-hover:block"
       >
         {{ project.title }}
       </h3>
