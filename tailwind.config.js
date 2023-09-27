@@ -22,6 +22,7 @@ export default {
       },
       aspectRatio: {
         "4/2-5": "4 / 2.5",
+        "almost-square": "4 / 3.75",
       },
       gridTemplateColumns: {
         "vertical-grid": "auto 1fr",
@@ -32,6 +33,12 @@ export default {
       },
       spacing: {
         "40vh": "40vh",
+      },
+      backgroundSize: {
+        "120%": "120%",
+      },
+      minHeight: {
+        "90vh": "90vh",
       },
       animation: {
         noise: "noise .09s infinite",
